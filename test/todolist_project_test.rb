@@ -1,10 +1,11 @@
+require 'bundler/setup'
 require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
 require_relative '../lib/todolist_project'
 
-class TodoListTest < MiniTest::Test
+class TodoListTest < Minitest::Test
   def setup
     @todo1 = Todo.new('Buy milk')
     @todo2 = Todo.new('Clean room')
